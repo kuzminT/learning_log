@@ -146,7 +146,7 @@ DATABASES = {
 SECURE_PROXY_SSL_HEADER = {'HTTP_X_FORWARDED_PROTO', 'https'}
 
 # Разрешены все заголовки хостов
-ALLOWED_HOST = ['*']
+ALLOWED_HOSTS = ['*']
 
 # Конфигурация статических ресурсов
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
