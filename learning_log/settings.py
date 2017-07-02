@@ -137,21 +137,21 @@ BOOTSTRAP3 = {
 
 # Настройки Heroku
 
-if os.getcwd() == '/app':
-    import dj_database_url
-    DATABASES = {
-    'default': dj_database_url.config(default='postgres://localohost')
+# if os.getcwd() == '/app':
+import dj_database_url
+DATABASES = {
+'default': dj_database_url.config(default='postgres://localohost')
     }
-    # Поддержка заголовка X-Forwarded-Proto для request.is_secure().
-    SECURE_PROXY_SSL_HEADER = {'HTTP_X_FORWARDED_PROTO', 'https'}
+# Поддержка заголовка X-Forwarded-Proto для request.is_secure().
+SECURE_PROXY_SSL_HEADER = {'HTTP_X_FORWARDED_PROTO', 'https'}
 
-    # Разрешены все заголовки хостов
-    ALLOWED_HOST = ['*']
+# Разрешены все заголовки хостов
+ALLOWED_HOST = ['*']
 
-    # Конфигурация статических ресурсов
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
-    STATICFILES_DIRS = {
-        os.path.join(BASE_DIR, 'static'),
+# Конфигурация статических ресурсов
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = {
+os.path.join(BASE_DIR, 'static'),
     }
 
